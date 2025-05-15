@@ -1,3 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: poppins, sans-serif;
+}
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .service-cards {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .stats {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .image1, .image2 {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .partners {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+}
+
+
+
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -81,10 +135,11 @@ nav a {
 
 .partners {
   display: flex;
-  justify-content: space-around;
+justify-content: center;
   align-items: center;
   background-color: white;
   padding: 30px 0;
+
 }
 .partners img {
   height: 30px;
@@ -114,10 +169,137 @@ nav a {
   flex-wrap: wrap;
 }
 
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive pour téléphone */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
 .card {
-  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
+
+.card {
+  /* flex: 1;
   min-width: 280px;
-  max-width: 320px;
+  max-width: 320px; */
   background: #fff;
   border-radius: 12px;
   padding: 30px 20px;
@@ -197,7 +379,7 @@ nav a {
 }
 
 .green {
-  color: #22c55e;
+  /* color: #22c55e; */
 }
 
 .parti-image1 {
